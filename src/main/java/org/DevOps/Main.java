@@ -8,13 +8,13 @@ public class Main {
     private Connection get_Db_Connection() {
         Connection con =null;
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             con= DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb","root","");
             System.out.println("Database is connected");
         }
-        catch(ClassNotFoundException ce){
-            System.out.println(ce.getMessage());
-        }
+//        catch(ClassNotFoundException ce){
+//            System.out.println(ce.getMessage());
+//        }
         catch(SQLException se){
             se.printStackTrace();
         }
